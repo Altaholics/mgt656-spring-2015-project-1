@@ -2,7 +2,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
-  background: url("http://www.hdwallpaperscool.com/wp-content/uploads/2015/01/skater-snow-skiing-desktop-background-wide-high-resolution-wallpaper.jpg") ;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("http://www.hdwallpaperscool.com/wp-content/uploads/2015/01/skater-snow-skiing-desktop-background-wide-high-resolution-wallpaper.jpg") ;
   background-size: cover;
   background-position: center;
   color: black;
