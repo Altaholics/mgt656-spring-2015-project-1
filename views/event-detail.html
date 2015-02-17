@@ -4,19 +4,35 @@
 <p>Here's a list of upcoming events:</p>
   <div>
   <li class="events" id="event-{{event.id}}">
-      <a href="/events/{{event.id}}">{{event.title}}</a>.
-      <time datetime="{{event.date}}">{{event.date|prettyDate}}</time>
+      <h1 id="title">{{event.title}}</h1>
+      <p>When: <span id="date">{{event.date}}</span></p>
+      <p>Where: <span id="location">{{event.location}}</span></p>
+      <p>Who: </p>
+      <ul id="attendees">
       {{event.attending.length}} attending so far.
-      <img src={{event.image}}/>
       {%for person in event.attending%}
       {{person}}
       {%endfor%}
+      </ul>
+      <img src="{{event.image}}" id="image">
     </li>
   </div>
   <div>
     <a href="/events/new">Create a new event</a>
   </div>
-
+  {% if errors %}
+<div>
+  <ul class="form-errors">
+    {% for errors in errors %}
+    <li>{{error}}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+<form method="POST">
+  <input type="text" name="email" id="email"/>
+  <input type="submit" value="Submit"/>
+</form>
 {% endblock %}
 
 <script>
